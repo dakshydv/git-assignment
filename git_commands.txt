@@ -1,0 +1,35 @@
+git init -b main
+Creates a new empty Git repository in the current folder with main as the default branch.
+
+git add <file> / git add .
+Adds changes in a file (or all files) to the staging area so they can be committed.
+
+git commit -m "message"
+Saves the staged changes as a new commit with a message describing what changed.
+
+git checkout -b <branch>
+Create a new branch and switches to it as well.
+
+git merge --no-ff feature -m "message"
+Merges the feature branch into the current branch and always creates a merge commit.
+
+git log --oneline --graph --all
+Shows the commit history in short form with a graph of all branches.
+
+git status
+Shows which files are modified, staged or untracked. Used it to check that .gitignore was working.
+
+git revert HEAD --no-edit
+Creates a new commit that undoes the changes of the last commit without deleting any history.
+
+git remote add origin <url>
+Links the local repository to the remote GitHub repository with the name origin.
+
+git push -u origin main
+Uploads the local main branch to GitHub and sets origin/main as the upstream branch.
+
+git push origin feature
+Uploads the feature branch to GitHub.
+
+git push
+Pushes new commits to the upstream branch that was already set.
